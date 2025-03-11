@@ -38,3 +38,4 @@ Click the settings gear icon in the top right corner to customize:
 - Short break duration
 - Long break duration
 
+Mini Demo: https://s8.ezgif.com/tmp/ezgif-8d1b395339c17c.gif
