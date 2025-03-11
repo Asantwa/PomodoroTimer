@@ -1,0 +1,372 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body - Dark background and light text */
+body {
+    background-color: var(--soft-black);
+    color: var(--cream);
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff; /* White text for headings */
+}
+
+/* Links */
+a {
+    color: #61dafb; /* Soft blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff79c6; /* Pinkish color on hover */
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background-color: #282c34; /* Dark background for buttons */
+    color: #ffffff; /* Light text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #61dafb; /* Change background on hover */
+    color: #1e1e1e; /* Dark text on hover */
+}
+
+/* Inputs and Textareas */
+input, textarea {
+    background-color: #333333; /* Dark input background */
+    color: #ffffff; /* Light text in inputs */
+    border: 1px solid #555555; /* Darker border */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    border-color: #61dafb; /* Blue border when focused */
+    outline: none;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #282c34;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    color: #ff79c6;
+}
+
+/* Footer */
+footer {
+    background-color: #181818; /* Slightly darker footer */
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #61dafb;
+}
+
+footer a:hover {
+    color: #ff79c6;
+}
+
+/* Cards and Boxes */
+.card {
+    background-color: #282c34; /* Dark background for cards */
+    border: 1px solid #444444;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.card-title {
+    color: #ffffff;
+}
+
+.card-body {
+    color: #e0e0e0;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #555555; /* Darker border */
+}
+
+th {
+    background-color: #444444; /* Darker background for header */
+    color: #ffffff;
+}
+
+td {
+    background-color: #333333; /* Dark row background */
+    color: #e0e0e0;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333333;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555555;
+    border-radius: 20px;
+    border: 3px solid #333333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+:root {
+    --cream: #F5F5DC;
+    --soft-black: #1A1A1A;
+    --accent: #2C2C2C;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 4rem;
+}
+
+.timer-container {
+    background-color: var(--accent);
+    padding: 6rem 8rem;
+    border-radius: 30px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.timer {
+    font-size: 12rem;
+    font-weight: 300;
+    margin: 2rem 0 4rem 0;
+    font-family: 'Courier New', monospace;
+    color: var(--cream);
+}
+
+.controls {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.controls button {
+    background-color: transparent;
+    border: 4px solid var(--cream);
+    color: var(--cream);
+    padding: 1.6rem 3rem;
+    font-size: 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.controls button:hover {
+    background-color: var(--cream);
+    color: var(--soft-black);
+}
+
+.controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.controls button:disabled:hover {
+    background-color: transparent;
+    color: var(--cream);
+}
+
+/* Added media query for smaller screens */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 4rem;
+    }
+    
+    .timer {
+        font-size: 8rem;
+    }
+    
+    .timer-container {
+        padding: 4rem 6rem;
+    }
+    
+    .controls button {
+        font-size: 1.5rem;
+        min-width: 150px;
+        padding: 1.2rem 2rem;
+    }
+}
+
+/* Added media query for mobile screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .timer {
+        font-size: 6rem;
+    }
+    
+    .timer-container {
+        padding: 2rem 3rem;
+    }
+    
+    .controls {
+        flex-direction: column;
+    }
+    
+    .controls button {
+        font-size: 1.2rem;
+        min-width: 120px;
+        padding: 1rem 1.5rem;
+    }
+}
+
+.settings-btn {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    color: var(--cream);
+    transition: transform 0.3s ease;
+}
+
+.settings-btn:hover {
+    transform: rotate(45deg);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--accent);
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    color: var(--cream);
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.settings-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.settings-group label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.settings-group input {
+    background-color: var(--soft-black);
+    border: 2px solid var(--cream);
+    color: var(--cream);
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 100px;
+    font-size: 1.2rem;
+}
+
+.modal-content button {
+    background-color: transparent;
+    border: 2px solid var(--cream);
+    color: var(--cream);
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.modal-content button:hover {
+    background-color: var(--cream);
+    color: var(--soft-black);
+}
+
+.session-indicator {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: var(--cream);
+    opacity: 0.9;
+}
+
+.session-indicator span {
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+    background-color: var(--soft-black);
+}
