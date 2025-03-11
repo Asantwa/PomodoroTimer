@@ -21,19 +21,9 @@ A sleek, minimalist Pomodoro Timer application built with HTML, CSS, and JavaScr
 3. Repeat 4 times
 4. Long Break (default: 15 minutes)
 
-## Controls
-
-- **Start**: Begin the timer
-- **Pause**: Temporarily stop the timer
-- **Reset**: Return to the first work session
-- **Settings**: Customize timer durations
-
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
-- Canvas Confetti library
+HTML | CSS | JavaScript | Canvas Confetti library
 
 ## Setup
 
